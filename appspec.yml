@@ -1,9 +1,15 @@
-version: 4.4.505
+version: 0.0
 os: windows
 files:
-    - source: .\src\upgrader.exe
+  - source: .\src\upgrader.exe
     destination: c:\temp
 hooks:
-    AfterInstall:
-        - location: .\scripts\run-upgrade.bat
-          timeout: 900
+  BeforeInstall:
+    - location: .\scripts\before-install.bat
+      timeout: 900
+  AfterInstall:
+    - location: .\scripts\run-upgrade.bat
+      timeout: 900
+  ApplicationStart:
+    - location: .\scripts\application-start.bat
+      timeout: 900

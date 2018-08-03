@@ -1,0 +1,1 @@
+echo "Finished" > before.txt
