@@ -1,0 +1,1 @@
+echo "not starting pos" > start.txt

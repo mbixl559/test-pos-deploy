@@ -10,6 +10,3 @@ hooks:
   AfterInstall:
     - location: .\scripts\run-upgrade.bat
       timeout: 900
-  ApplicationStart:
-    - location: .\scripts\application-start.bat
-      timeout: 900
