@@ -27,9 +27,11 @@ if /I "%returnCode%" EQU "%SQL_UPDATE_FAILED%" (
     set ROLLBACK=True
 )
 
-if /I "%ROLLBACK%" EQU "True" (
+if "%ROLLBACK%"=="True" (
+    echo Rolling back update.
     rmdir /Q /S "C:\Program Files (x86)\Solutions POS"
     start /wait "POS Rollback" robocopy "C:\ProgramData\Solutions POS\Backup" "C:\Program Files (x86)\Solutions POS"
+    exit %returnCode%
 )
 
 :: No errors. Return Success.
