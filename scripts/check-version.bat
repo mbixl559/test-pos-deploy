@@ -1,7 +1,7 @@
 @echo off
 
 :: Set the update version to check exe against
-set VERSION=Version=4.4.600.3
+set VERSION=Version=4.4.412.1942
 
 :: Get the exe current version
 wmic datafile where name="C:\\Program Files (x86)\\Solutions POS\\Solutions POS.exe" get Version /value > temp.txt
