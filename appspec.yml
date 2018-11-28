@@ -1,12 +1,12 @@
 version: 0.0
 os: windows
 files:
-  - source: .\src\upgrader.exe
-    destination: c:\temp
+  - source: ".\\src\\Solutions POS.exe"
+    destination: "c:\\Program Files (x86)\\Solutions POS"
 hooks:
   BeforeInstall:
     - location: .\scripts\before-install.bat
       timeout: 900
   AfterInstall:
-    - location: .\scripts\run-upgrade.bat
+    - location: .\scripts\check-version.bat
       timeout: 900
